@@ -1,0 +1,18 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int sayi;
+    int tersi=0;
+    int kalan;
+    printf("sayıyı giriniz\n");
+    scanf("%d",&sayi);
+    while(sayi!=0){
+        kalan=sayi%10; 
+        tersi=tersi*10+kalan; 
+        sayi/=10; 
+    };
+    printf("%d",tersi);
+
+    return 0;
+}

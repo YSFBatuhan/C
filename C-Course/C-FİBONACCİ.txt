@@ -1,0 +1,31 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("sayıyı girin : ");
+    scanf("%d",&n);
+    
+    int sayi1,sayi2,sayi3;
+    sayi1=1;
+    sayi2=1;
+    int dizi[100];
+    dizi[0]=1;
+    dizi[1]=1;
+
+    for(int i=0;i<n;i++){
+        sayi3=sayi2+sayi1;
+        sayi2=sayi1;
+        sayi1=sayi3;
+        
+        
+        dizi[i+2]=sayi3;
+        printf("%d ",dizi[i]);
+        
+        
+        
+        
+    }
+
+    return 0;
+}

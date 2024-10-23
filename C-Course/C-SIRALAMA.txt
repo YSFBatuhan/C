@@ -1,0 +1,40 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+
+void sirala(int a[],int size){
+    for(int i=0;i<size-1;i++){
+        for(int j=0;j<size-1-i;j++){
+            if(a[j]>a[j+1]){
+                int temp=a[j+1];
+                a[j+1]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+}
+int main() {
+        srand(time(0));
+    int adet;
+    int dizi[100];
+    scanf("%d",&adet);
+
+
+    for(int i=0;i<adet;i++){
+        dizi[i]=rand()%100;
+    }
+     for(int i=0;i<adet;i++){
+        printf("%d ",dizi[i]);
+        
+    }
+    printf("\n\n");
+    sirala(dizi,adet);
+         for(int i=0;i<adet;i++){
+        printf("%d ",dizi[i]);
+        
+    }
+       
+    return 0;
+}

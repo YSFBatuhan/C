@@ -1,0 +1,37 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+   int sütun;
+   printf("sütun sayısını giriniz : ");
+   scanf("%d",&sütun);
+   int dizi[100][100];
+   
+   printf("p        ");
+   for(int i=0;i<sütun;i++){
+       printf("%4d",i);
+   }
+   printf("\nn");
+   printf("\n**********************************************************\n");
+   for(int i=0;i<sütun;i++){
+
+        dizi[i][i]=1;
+           dizi[i][0]=1;
+       for(int j=1;j<i;j++){
+            dizi[i][j]=dizi[i-1][j]+dizi[i-1][j-1];
+     
+          
+       }
+    
+   }
+   for(int i=0;i<sütun;i++){
+       printf("%d   --   ",i);
+       for(int j=0;j<=i;j++){//yarım piramit şeklinde basar
+           printf("%4d",dizi[i][j]);
+       }
+       printf("\n");
+   }
+
+    return 0;
+}

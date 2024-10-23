@@ -1,0 +1,50 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void carre(int num,int* res){
+    *res=num*num;
+    
+}
+
+
+int main() {
+    // Write C code here
+    int r;
+    int a;
+    scanf("%d",&a);
+    carre(a,&r);
+    printf("%d",r);
+
+    return 0;
+}
+
+****************************************************
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int üstünüal(int x,int y){
+    int sonuc=1;
+    for(int i=0;i<y;i++){
+        sonuc=sonuc*x;
+    }
+    return sonuc;
+}
+void üssünüAL(int *x,int *y,int *s){
+    int sonuc=1;
+    for(int i=0;i<*y;i++){
+        sonuc=sonuc**x;
+    }
+    *s=sonuc;
+    
+}
+int main() {
+    int a,b,s;
+    scanf("%d %d",&a,&b);
+    printf("returnlü fonksiyon : %d",üstünüal(a,b));
+    üssünüAL(&a,&b,&s);
+    printf("\nvoidli fonksiyon : %d",s);
+    
+
+    return 0;
+}

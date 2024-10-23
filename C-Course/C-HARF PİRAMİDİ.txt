@@ -1,0 +1,22 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char dizi[5]={'A','B','C','D','E'};
+    char start='A';
+    char input;
+    scanf("%c",&input);
+    int son=(input-start);
+    
+    
+
+    for(int i=0;i<=son;i++){
+        for(int j=0;j<=i;j++){
+            printf("%c ",start);
+        }
+        start++;
+        printf("\n");
+    }
+    return 0;
+}
